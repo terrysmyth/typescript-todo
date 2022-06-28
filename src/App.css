@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
-}
+/* 
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+Green: #038560;
+Blue: #038E8F;
+Red: #78142B;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+*/
 
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  background: rgb(5, 53, 72);
+  background: linear-gradient(
+    0deg,
+    rgba(5, 53, 72, 0.9979342078628326) 0%,
+    rgba(9, 92, 121, 1) 35%
+  );
+  color: #fff;
+  padding: 2em;
+}
+
+button {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* FILTER */
+
+.filter {
+  padding-bottom: 2em;
+  display: flex;
+  width: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter input {
+  flex-grow: 1;
+  font-size: 16px;
+  color: rgba(5, 53, 72, 1);
+  padding: 5px 10px 3px;
+  margin: 0;
+  transition-duration: 0.5s;
+  border: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.filter input:focus {
+  outline: transparent;
+  border: 0;
+  border-bottom: 2px solid #038560;
+}
+
+.filter button {
+  margin-left: 0.5em;
+  padding: 0 1em;
+  background-color: #fff;
+  color: rgba(5, 53, 72, 1);
+  font-weight:500;
+  transition-duration: 0.5s;
+}
+
+.filter button:hover {
+  opacity: 0.6;
+}
+
+.filter button.selected {
+  background-color:  #038560;
+  color: #fff
+}
+
+/* ADD TODO */
+
+.add-to-do {
+  margin-bottom: 2em;
+  width: 600px;
+  display: flex;
+}
+
+.add-to-do input {
+  flex-grow: 1;
+  font-size: 16px;
+  color: rgba(5, 53, 72, 1);
+  padding: 5px 10px 3px;
+  margin: 0;
+  transition-duration: 0.5s;
+  border: 0;
+  border-bottom: 2px solid transparent;
+}
+
+.add-to-do input:focus {
+  outline: transparent;
+  border: 0;
+  border-bottom: 2px solid #038560;
+}
+
+.add-to-do button {
+  background-color: #038560;
+  color: #fff;
+  border: 0;
+  width: 32px;
+  transition-duration: 0.5s;
+}
+
+.add-to-do button:hover {
+  opacity: 0.6;
+}
+
+.add-to-do button span {
+  font-size: 18px;
+}
+
+/* TODOS */
+
+.todos {
+  padding-top: 2em;
+  border-top: 2px solid white;
+}
+
+.todo {
+  display: flex;
+  color: rgba(5, 53, 72, 1);
+  margin-top: 0.5em;
+  width: 600px;
+}
+
+.todo p {
+  margin: 0;
+  padding: 5px 10px;
+  margin-right: auto;
+  background-color: #fff;
+  flex-grow: 1;
+  font-size: 16px;
+}
+
+.todo.done p {
+  text-decoration: line-through;
+}
+
+.todo input {
+  margin: 0;
+  padding: 5px 10px;
+  margin-right: auto;
+  background-color: #fff;
+  flex-grow: 1;
+  font-size: 16px;
+  border: 0;
+  color: rgba(5, 53, 72, 1);
+  height: 32px;;
+}
+
+.todo button {
+  width: 32px;
+  transition-duration: 0.5s;
+}
+
+.todo button:hover {
+  opacity: 0.6;
+}
+
+.todo button span {
+  font-size: 18px;
+  color: #fff;
+}
+
+.todo button.edit {
+  background-color: #038e8f;
+}
+
+.todo button.delete {
+  background-color: #78142b;
+}
+
+.todo button.done {
+  background-color: #038560;
+  margin-left: 0.5em;
 }
